@@ -127,7 +127,16 @@ with tab_new:
 
         with col1:
             vehicle = st.selectbox("Όχημα", options=VEHICLE_OPTIONS)
-            driver_name = st.text_input("Ονοματεπώνυμο οδηγού")
+            driver_name = st.selectbox(
+                "Ονοματεπώνυμο οδηγού",
+                options=[
+                    "(Επιλέξτε)",
+                    "ΒΑΚΑΛΦΩΤΗΣ ΒΑΓΓΕΛΗΣ",
+                    "ΒΑΚΑΛΦΩΤΗΣ ΓΡΗΓΟΡΗΣ",
+                    "ΚΟΛΤΣΙΝΑΚΟΣ ΒΑΓΓΕΛΗΣ",
+                    "ΙΜΠΑΣ ΙΟΡΔΑΝΗΣ",
+                ],
+            )
 
         with col2:
             liters = st.number_input(
@@ -155,7 +164,7 @@ with tab_new:
         if submitted:
             errors = []
 
-            if not driver_name.strip():
+            if not driver_name or driver_name == "(Επιλέξτε)":
                 errors.append("Το πεδίο «Ονοματεπώνυμο οδηγού» είναι υποχρεωτικό.")
 
             if liters <= 0:
