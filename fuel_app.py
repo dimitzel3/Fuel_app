@@ -102,7 +102,7 @@ st.set_page_config(
 st.markdown(
     """
     <div style="padding: 0.5rem 0 1rem 0;">
-      <h1 style="margin-bottom: 0.2rem;">⛽ Ανεφοδιασμοί Οχημάτων</h1>
+      <h1 style="margin-bottom: 0.2rem;">⛽ Gtrans Ανεφοδιασμοί Οχημάτων</h1>
       <p style="color: #6b7280; margin: 0;">
         Καταγραφή ανεφοδιασμών καυσίμου, με αυτόματη ημερομηνία & ώρα, 
         ανά όχημα και οδηγό.
@@ -291,3 +291,4 @@ with tab_history:
             **Συνολική αξία (φίλτρου):** {total_cost:.2f} €
             """
         )
+
